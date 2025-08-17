@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Download, Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
-import meghImage from '../assets/meghshah-new.png';
+import mannImage from '../assets/ProfilePhoto.jpeg';
 
 const Hero = () => {
   // Data configuration
@@ -165,7 +165,7 @@ const Hero = () => {
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary-400 to-secondary-400 p-1">
                 <div className="w-full h-full rounded-full bg-white p-2">
                   <img
-                    src={meghImage}
+                    src={mannImage}
                     alt="Profile"
                     className="w-full h-full rounded-full object-cover"
                     loading="lazy"
