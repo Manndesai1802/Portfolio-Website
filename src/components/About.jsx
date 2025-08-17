@@ -4,17 +4,17 @@ import { Code2, Users, Trophy, BookOpen } from 'lucide-react';
 const About = () => {
   const stats = [
     { icon: Code2, value: '2+', label: 'Years Experience' },
-    { icon: Users, value: '3', label: 'Companies Worked' },
-    { icon: Trophy, value: '5+', label: 'Projects Completed' },
-    { icon: BookOpen, value: 'B.Tech', label: 'Computer Engineering' }
+    { icon: Users, value: '1', label: 'Companies Worked' },
+    { icon: Trophy, value: '4+', label: 'Projects Completed' },
+    { icon: BookOpen, value: 'B.Tech', label: 'Information Technology' }
   ];
 
   const focusAreas = [
-    'Full-stack web development with React.js, Node.js & .Net Technologies',
-    'Modern JavaScript frameworks and libraries',
-    'Database design and optimization',
-    'Cloud technologies and deployment',
-    'Agile development methodologies'
+    'Full-stack web development using React (TypeScript), C#, and PHP',
+    'Experience with modern JavaScript frameworks and libraries',
+    'Database design and optimization with SQL Server',
+    'Familiar with cloud technologies and deployment processes',
+    'Working knowledge of Agile development methodologies'
   ];
 
   return (
@@ -43,21 +43,21 @@ const About = () => {
             <h3 className="text-2xl font-bold text-primary-600 mb-4">
               Software Engineer
             </h3>
-            
+
             <p className="text-gray-600 leading-relaxed">
-              I'm a passionate software developerwith hands-on industry experience. With nearly 2 years of professional experience 
-              across 3 software companies, I've developed a strong foundation in modern web technologies 
+              I'm a passionate software developerwith hands-on industry experience. With nearly 2 years of professional experience
+              across 3 software companies, I've developed a strong foundation in modern web technologies
               and software development practices.
             </p>
-            
+
             <p className="text-gray-600 leading-relaxed">
-              My journey in technology started during my academic years where I created various projects 
-              that sparked my interest in software development. This passion led me to work in the industry 
+              My journey in technology started during my academic years where I created various projects
+              that sparked my interest in software development. This passion led me to work in the industry
               while completing my studies, giving me a unique blend of theoretical knowledge and practical experience.
             </p>
-            
+
             <p className="text-gray-600 leading-relaxed">
-              I believe in continuous learning and staying updated with the latest technologies. My goal is to 
+              I believe in continuous learning and staying updated with the latest technologies. My goal is to
               create innovative solutions that make a real impact while building scalable and maintainable software systems.
             </p>
 

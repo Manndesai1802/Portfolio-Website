@@ -7,7 +7,7 @@ const Hero = () => {
   const heroData = {
     name: 'Mann Desai',
     title: 'Software Developer',
-    description: 'I am a software engineer with over 2 years of experience in developing useful and creative software. I have worked in different software companies and handled both frontend and backend projects. I enjoy turning ideas into real, working applications using clean and simple code.',
+    description: 'I am a software engineer with over 2 years of experience in building efficient and user-friendly software. For the past 1.5+ years, I have been working at my current company, where I have been involved in developing VumaxPro — a web-based product focused on data visualization. I enjoy transforming ideas into functional and clean applications using modern development practices.',
     resumeUrl: '/MannDesai_Resume.pdf',
     resumeFileName: 'MannDesai_Resume.pdf',
     email: 'manndesai03@gmail.com',

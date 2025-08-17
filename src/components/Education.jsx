@@ -4,19 +4,20 @@ import { GraduationCap, MapPin, Calendar, CheckCircle } from 'lucide-react';
 const Education = () => {
   const education = [
     {
-      degree: 'Bachelor of Technology - Computer Engineering',
+      degree: 'Bachelor of Technology - Information Technology',
       school: 'Birla VIshvakarma Mahavidyalaya',
       location: 'Anand, Gujarat',
       period: '2020 - 2024',
-      status: 'Currently Pursuing',
+      status: 'Completed',
       description: 'Focused on computer science fundamentals, software engineering principles, and modern programming technologies. Maintained strong academic performance while gaining industry experience.',
       highlights: [
-        'Relevant Coursework: Data Structures, Algorithms, Database Systems, Software Engineering',
-        'Project-based learning with hands-on development experience',
-        'Active participation in coding competitions and technical events',
-        'Balanced academics with professional work experience'
+        'Proficient in building responsive websites using HTML, CSS, JavaScript, and React',
+        'Comfortable working with SQL and writing efficient database queries',
+        'Gained practical development experience through project-based learning',
+        'Focused on applying web technologies to real-world solutions rather than deep theoretical coding subjects',
+        'Successfully balanced academic studies with hands-on software development experience'
       ],
-      cpi: '8.42/10.0'
+      cpi: '8.26/10.0'
     },
     {
       degree: 'Higher Secondary Education (Science Stream)',
@@ -30,7 +31,7 @@ const Education = () => {
         'Participated in academic and co-curricular activities',
         'Consistently scored well in internal and board exams'
       ],
-      percentage: '89.66%'
+      percentage: '79%'
     },
     {
       degree: 'Secondary School Education (10th Grade)',
@@ -44,7 +45,7 @@ const Education = () => {
         'Actively involved in school-level competitions and activities',
         'Achieved distinction in final board examinations'
       ],
-      percentage: '92.66%'
+      percentage: '87.5 %'
     }
   ];
 
@@ -106,7 +107,7 @@ const Education = () => {
                         {edu.status}
                       </span> */}
                       <span className="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-bold">
-                        {edu.cpi && `CPI: ${edu.cpi}` || edu.percentage && `Percentage: ${edu.percentage}` }
+                        {edu.cpi && `CPI: ${edu.cpi}` || edu.percentage && `Percentage: ${edu.percentage}`}
                       </span>
                     </div>
                   </div>
