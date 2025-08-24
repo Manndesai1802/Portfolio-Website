@@ -74,10 +74,10 @@ const Education = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative"
+              className="relative mb-12"
             >
               {/* Timeline Line */}
-              <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-primary-200 dark:bg-primary-700"></div>
+              <div className="absolute left-8 top-16 bottom-0.5 w-0.5 bg-primary-200 dark:bg-primary-700"></div>
 
               {/* Timeline Node */}
               <div className="absolute left-6 top-12 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg"></div>

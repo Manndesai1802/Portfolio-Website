@@ -108,7 +108,7 @@ const Experience = () => {
             >
               {/* Timeline Line */}
               {index < experiences.length && (
-                <div className="absolute left-8 top-16 h-32 w-0.5 bg-primary-200 dark:bg-primary-700"></div>
+                <div className="absolute left-8 top-16 bottom-0.5 w-0.5 bg-primary-200 dark:bg-primary-700"></div>
               )}
 
               {/* Timeline Node */}
