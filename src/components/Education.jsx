@@ -5,7 +5,7 @@ const Education = () => {
   const education = [
     {
       degree: 'Bachelor of Technology - Information Technology',
-      school: 'Birla VIshvakarma Mahavidyalaya',
+      school: 'Birla Vishvakarma Mahavidyalaya',
       location: 'Anand, Gujarat',
       period: '2020 - 2024',
       status: 'Completed',
@@ -50,7 +50,10 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-50">
+    <section 
+      id="education" 
+      className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,7 +62,7 @@ const Education = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Education</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Education</h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto rounded-full"></div>
         </motion.div>
 
@@ -74,24 +77,24 @@ const Education = () => {
               className="relative"
             >
               {/* Timeline Line */}
-              <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-primary-200"></div>
+              <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-primary-200 dark:bg-primary-700"></div>
 
               {/* Timeline Node */}
-              <div className="absolute left-6 top-12 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg"></div>
+              <div className="absolute left-6 top-12 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg"></div>
 
               {/* Content Card */}
-              <div className="ml-20 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <div className="ml-20 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div className="p-8">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                         {edu.degree}
                       </h3>
-                      <div className="flex items-center text-primary-600 font-semibold mb-2">
+                      <div className="flex items-center text-primary-600 dark:text-primary-400 font-semibold mb-2">
                         <GraduationCap size={18} className="mr-2" />
                         {edu.school}
                       </div>
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
+                      <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-300 mb-4">
                         <div className="flex items-center">
                           <MapPin size={16} className="mr-1" />
                           {edu.location}
@@ -103,21 +106,18 @@ const Education = () => {
                       </div>
                     </div>
                     <div className="flex flex-col items-end">
-                      {/* <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mb-2">
-                        {edu.status}
-                      </span> */}
-                      <span className="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-bold">
+                      <span className="bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-300 px-3 py-1 rounded-full text-sm font-bold">
                         {edu.cpi && `CPI: ${edu.cpi}` || edu.percentage && `Percentage: ${edu.percentage}`}
                       </span>
                     </div>
                   </div>
 
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                     {edu.description}
                   </p>
 
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Highlights:</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Highlights:</h4>
                     <div className="grid gap-2">
                       {edu.highlights.map((highlight, hIndex) => (
                         <motion.div
@@ -129,7 +129,7 @@ const Education = () => {
                           className="flex items-start"
                         >
                           <CheckCircle size={16} className="text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-600 text-sm">{highlight}</span>
+                          <span className="text-gray-600 dark:text-gray-300 text-sm">{highlight}</span>
                         </motion.div>
                       ))}
                     </div>

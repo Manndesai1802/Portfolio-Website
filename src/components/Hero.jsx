@@ -74,7 +74,10 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center py-20 md:py-0"
+      className="relative min-h-screen flex items-center py-20 md:py-0 
+                 bg-gradient-to-br from-blue-50 to-indigo-100 
+                 dark:from-gray-900 dark:to-gray-800 
+                 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -85,7 +88,7 @@ const Hero = () => {
           >
             <motion.h1
               {...animationConfig.heading}
-              className="text-4xl md:text-6xl font-bold text-gray-900"
+              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white"
             >
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
@@ -95,14 +98,14 @@ const Hero = () => {
 
             <motion.p
               {...animationConfig.subtitle}
-              className="text-xl md:text-2xl text-gray-600 font-medium"
+              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium"
             >
               {heroData.title}
             </motion.p>
 
             <motion.p
               {...animationConfig.description}
-              className="text-gray-600 text-lg leading-relaxed"
+              className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed"
             >
               {heroData.description}
             </motion.p>
@@ -125,7 +128,9 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleDownloadResume}
-                className="border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg font-medium flex items-center space-x-2 hover:bg-primary-600 hover:text-white transition-colors"
+                className="border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg font-medium flex items-center space-x-2 
+                           hover:bg-primary-600 hover:text-white transition-colors 
+                           dark:border-primary-400 dark:text-primary-400 dark:hover:bg-primary-400 dark:hover:text-gray-900"
               >
                 <Download size={20} />
                 <span>Download Resume</span>
@@ -144,7 +149,8 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-gray-600 hover:text-primary-600 transition-colors"
+                  className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg 
+                             text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon size={24} />
@@ -163,7 +169,7 @@ const Hero = () => {
               className="relative"
             >
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary-400 to-secondary-400 p-1">
-                <div className="w-full h-full rounded-full bg-white p-2">
+                <div className="w-full h-full rounded-full bg-white dark:bg-gray-900 p-2">
                   <img
                     src={mannImage}
                     alt="Profile"
@@ -175,25 +181,33 @@ const Hero = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-4 rounded-full border-2 border-dashed border-primary-300"
+                className="absolute -inset-4 rounded-full border-2 border-dashed border-primary-300 dark:border-primary-600"
               />
             </motion.div>
           </motion.div>
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div
-          {...animationConfig.scrollIndicator}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-gray-500"
-          >
-            <ChevronDown size={24} />
-          </motion.div>
-        </motion.div>
+       <motion.div
+  {...animationConfig.scrollIndicator}
+  className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block"
+>
+  <motion.button
+    animate={{ y: [0, 10, 0] }}
+    transition={{ duration: 2, repeat: Infinity }}
+    onClick={() => {
+      const nextSection = document.getElementById("about"); // 👈 change to the section you want
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+    className="flex flex-col items-center text-gray-500 dark:text-gray-400 cursor-pointer"
+  >
+    <ChevronDown size={28} />
+    {/* <span className="text-xs mt-1">Scroll</span> */}
+  </motion.button>
+</motion.div>
+
       </div>
     </section>
   );

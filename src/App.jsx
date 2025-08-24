@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import MobileNavbar from './components/MobileNavbar';
 import Hero from './components/Hero';
@@ -13,6 +12,17 @@ import Footer from './components/Footer';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +34,7 @@ function App() {
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
             break;
@@ -38,10 +48,15 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
-      <MobileNavbar activeSection={activeSection} setActiveSection={setActiveSection} />
-      
+    <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <Header 
+        activeSection={activeSection} 
+        setActiveSection={setActiveSection} 
+        theme={theme}
+        setTheme={setTheme}
+      />
+      {/* <MobileNavbar activeSection={activeSection} setActiveSection={setActiveSection} /> */}
+<MobileNavbar theme={theme} setTheme={setTheme} activeSection={activeSection} setActiveSection={setActiveSection} />
       <main>
         <Hero />
         <About />
@@ -51,7 +66,7 @@ function App() {
         <Projects />
         <Contact />
       </main>
-      
+
       <Footer />
     </div>
   );
