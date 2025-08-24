@@ -20,57 +20,86 @@ const Experience = () => {
   //     technologies: ['React.js', 'Node.js', 'JavaScript', 'CSS3', 'Git', 'Agile']
   //   }
   // ];
-  const experiences = [
-    {
-      title: 'Associate Software Engineer',
-      company: 'Alois Solution Pvt. Ltd.',
-      location: 'Vadodara, Gujarat',
-      period: 'Nov 2024 - Present',
-      status: 'Full-time',
-      description:
-        'Working as a Full-Stack Developer using JavaScript & .NET technologies, focusing on developing high-performance web applications.',
-      responsibilities: [
-        'Developing full-stack web applications using JavaScript and .NET technologies',
-        'Enhanced system performance to exceed 90% and optimized SEO',
-        'Improved user experience and accessibility across web platforms',
-        'Utilized GitHub for version control and collaboration',
-        'Followed Scrum methodology for effective project management'
-      ],
-      technologies: ['JavaScript', '.NET', 'GitHub', 'Scrum', 'HTML5', 'CSS3']
+const experiences = [
+  {
+    title: 'Software Developer',
+    company: 'Etech International Inc.',
+    location: 'Gujarat, India',
+    period: 'May 2024 - Present',
+    status: 'Full-time',
+    description:
+      'Working as a Software Developer focusing on enterprise-grade applications using modern web technologies and Microsoft stack.',
+    responsibilities: [
+      'Developing and maintaining scalable applications using React.js, TypeScript, C#, and .NET Core.',
+      'Participating in debugging, feature development, and live issue resolution.',
+      'Collaborating in Agile teams using Jira for task tracking and Bitbucket for version control.',
+      'Writing reusable, clean, and optimized code for both frontend and backend.',
+      'Ensuring code quality through unit testing and peer reviews.'
+    ],
+    technologies: ['React.js', 'TypeScript', 'C#', '.NET Core', 'SQL Server', 'Bitbucket', 'Jira']
   },
-    {
-      title: 'Junior Software Engineer',
-      company: 'Civica Resource Pvt. Ltd.',
-      location: 'Vadodara, Gujarat',
-      period: 'Feb 2024 - Nov 2024',
-      status: 'Full-time',
-      description:
-        'Worked as a Full-Stack Developer on enterprise projects using .NET Core and React.js.',
-      responsibilities: [
-        'Developed applications using .NET Core 6 (MVC & API), EF Core, and React.js',
-        'Used Azure DevOps for version control, CI/CD, and team collaboration',
-        'Wrote unit tests to ensure code reliability and maintainability',
-        'Collaborated with team members to meet project deadlines and ensure quality delivery'
-      ],
-      technologies: ['.NET Core 6', 'EF Core', 'React.js', 'Azure DevOps', 'CI/CD', 'Unit Testing']
-    },
-    {
-      title: 'IDP Project - Intern',
-      company: 'Venom Technologies',
-      location: 'Anand, Gujarat',
-      period: 'July 2023 - Dec 2023',
-      status: 'Internship',
-      description:
-        'Developed a full-stack industrial project using the MERN stack, including frontend, backend, and deployment.',
-      responsibilities: [
-        'Built a full-stack web application using React.js, Node.js, MongoDB, and Express.js',
-        'Integrated RESTful APIs for data handling and communication between client and server',
-        'Deployed the application on the cloud for real-world accessibility',
-        'Gained hands-on experience in both frontend and backend development'
-      ],
-      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST API', 'Cloud Deployment']
-    }
-  ];
+  {
+    title: 'Internship Trainee',
+    company: 'Etech International Inc.',
+    location: 'Gujarat, India',
+    period: 'Dec 2023 - Apr 2024',
+    status: 'Internship',
+    description:
+      'Completed a 5-month internship program working on real-world modules and basic functionalities using .NET Core and React.',
+    responsibilities: [
+      'Built and tested basic modules in React and .NET Core.',
+      'Learned and implemented foundational concepts of full-stack development.',
+      'Collaborated with senior developers for code debugging and improvements.',
+      'Participated in sprint planning, documentation, and code walkthroughs.'
+    ],
+    technologies: ['React.js', 'TypeScript', '.NET Core', 'SQL Server']
+  },
+  {
+    title: 'Project Intern',
+    company: 'Conveyor Industries',
+    location: 'Anand, Gujarat, India',
+    period: 'Jun 2023 - Jul 2023',
+    status: 'Full-time',
+    description:
+      'Worked on a short-term industrial project during the summer internship program.',
+    responsibilities: [
+      'Assisted in developing and testing web components.',
+      'Documented code and created small utilities for project use.'
+    ],
+    technologies: ['HTML', 'CSS', 'JavaScript']
+  },
+  {
+    title: 'Summer Intern (Web + IoT Developer)',
+    company: 'Code Potato Software Pvt. Ltd.',
+    location: 'Anand, Gujarat, India',
+    period: 'May 2023 - Jun 2023',
+    status: 'Internship',
+    description:
+      'Worked as a Web Developer with IoT integration during the summer internship.',
+    responsibilities: [
+      'Developed web interfaces integrated with IoT using Blynk and Node MCU.',
+      'Created dashboards and controlled IoT hardware using custom web UI.',
+      'Used Arduino IDE and Blynk for prototyping.'
+    ],
+    technologies: ['HTML5', 'CSS', 'JavaScript', 'React.js', 'Node MCU', 'Blynk', 'Arduino IDE']
+  },
+  {
+    title: 'Summer Intern (Full Stack Developer)',
+    company: 'Code Potato Software Pvt. Ltd.',
+    location: 'Anand, Gujarat, India',
+    period: 'May 2022 - Jun 2022',
+    status: 'Internship',
+    description:
+      'Worked on full-stack web development projects using open-source technologies.',
+    responsibilities: [
+      'Built CRUD operations using PHP and MySQL.',
+      'Created responsive frontend using Bootstrap, HTML5, and CSS.',
+      'Used jQuery for dynamic frontend interactivity.'
+    ],
+    technologies: ['PHP', 'HTML5', 'CSS', 'JavaScript', 'jQuery', 'Bootstrap', 'PhpMyAdmin']
+  }
+];
+
 
   return (
     <section id="experience" className="py-20 bg-white">
@@ -97,7 +126,7 @@ const Experience = () => {
               className="relative mb-12"
             >
               {/* Timeline Line */}
-              {index < experiences.length - 1 && (
+              {index < experiences.length  && (
                 <div className="absolute left-8 top-16 h-32 w-0.5 bg-primary-200"></div>
               )}
 

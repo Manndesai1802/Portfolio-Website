@@ -80,8 +80,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/megh2108', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/megh-shah-a19813205', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/Manndesai1802', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/mann-desai-2962a11bb', label: 'LinkedIn' },
   ];
 
   return (
