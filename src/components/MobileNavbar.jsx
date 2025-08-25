@@ -23,7 +23,7 @@ const MobileNavbar = ({ activeSection, setActiveSection, theme, setTheme }) => {
     <motion.div
       className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 z-50 md:hidden transition-colors duration-300"
     >
-      <div className="flex items-center justify-around py-2">
+      <div className="flex items-center justify-around py-1">
         {navItems.map((item) => {
           const Icon = item.icon;
           return (
@@ -45,7 +45,7 @@ const MobileNavbar = ({ activeSection, setActiveSection, theme, setTheme }) => {
         <motion.button
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           whileTap={{ scale: 0.9 }}
-          className="flex flex-col items-center space-y-1 px-2 py-2 rounded-lg transition-colors text-gray-500 dark:text-gray-400"
+          className="flex flex-col items-center space-y-1 px-1 py-1 rounded-lg transition-colors text-gray-500 dark:text-gray-400"
         >
           {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
           <span className="text-xs font-medium">{theme === "light" ? "Dark" : "Light"}</span>
