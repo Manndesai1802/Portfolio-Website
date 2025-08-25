@@ -56,7 +56,7 @@ function App() {
         setTheme={setTheme}
       />
       {/* <MobileNavbar activeSection={activeSection} setActiveSection={setActiveSection} /> */}
-{/* <MobileNavbar theme={theme} setTheme={setTheme} activeSection={activeSection} setActiveSection={setActiveSection} /> */}
+<MobileNavbar theme={theme} setTheme={setTheme} activeSection={activeSection} setActiveSection={setActiveSection} />
       <main>
         <Hero />
         <About />
