@@ -31,9 +31,8 @@ const MobileNavbar = ({ activeSection, setActiveSection, theme, setTheme }) => {
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               whileTap={{ scale: 0.9 }}
-              className={`flex flex-col items-center space-y-1 px-2 py-2 rounded-lg transition-colors ${
-                activeSection === item.id ? 'text-primary-600' : 'text-gray-500 dark:text-gray-400'
-              }`}
+              className={`flex flex-col items-center space-y-1 px-2 py-2 rounded-lg transition-colors ${activeSection === item.id ? 'text-primary-600' : 'text-gray-500 dark:text-gray-400'
+                }`}
             >
               <Icon size={20} />
               <span className="text-xs font-medium">{item.label}</span>
@@ -45,10 +44,12 @@ const MobileNavbar = ({ activeSection, setActiveSection, theme, setTheme }) => {
         <motion.button
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           whileTap={{ scale: 0.9 }}
-          className="flex flex-col items-center space-y-1 px-2 py-2 rounded-lg transition-colors text-gray-500 dark:text-gray-400"
+          className="flex flex-col items-center px-2 py-1 rounded-lg transition-colors text-gray-500 dark:text-gray-400"
         >
           {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-          <span className="text-xs font-medium">{theme === "light" ? "Dark" : "Light"}</span>
+          <span className="text-[11px] font-medium leading-tight">
+            {theme === "light" ? "Dark" : "Light"}
+          </span>
         </motion.button>
       </div>
     </motion.div>
