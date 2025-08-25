@@ -4,7 +4,7 @@ import { Home, GraduationCap, Briefcase, Code2, FolderOpen, Mail, Sun, Moon } fr
 const MobileNavbar = ({ activeSection, setActiveSection, theme, setTheme }) => {
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
-    { id: 'education', label: 'Educ.', icon: GraduationCap },
+    // { id: 'education', label: 'Educ.', icon: GraduationCap },
     { id: 'experience', label: 'Expe.', icon: Briefcase },
     { id: 'skills', label: 'Skills', icon: Code2 },
     { id: 'projects', label: 'Proj.', icon: FolderOpen },
