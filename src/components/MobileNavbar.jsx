@@ -41,7 +41,7 @@ const MobileNavbar = ({ activeSection, setActiveSection, theme, setTheme }) => {
         })}
 
         {/* Theme Toggle Button */}
-        <motion.button
+        {/* <motion.button
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           whileTap={{ scale: 0.9 }}
           className="flex flex-col items-center px-2 py-1 rounded-lg transition-colors text-gray-500 dark:text-gray-400"
@@ -50,7 +50,7 @@ const MobileNavbar = ({ activeSection, setActiveSection, theme, setTheme }) => {
           <span className="text-[11px] font-medium leading-tight">
             {theme === "light" ? "Dark" : "Light"}
           </span>
-        </motion.button>
+        </motion.button> */}
       </div>
     </motion.div>
   );
